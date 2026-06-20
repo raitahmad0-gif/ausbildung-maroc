@@ -1,112 +1,321 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Ausbildung Maroc</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-body{
-font-family:Arial,sans-serif;
+
+*{
 margin:0;
-background:#f5f5f5;
-direction:rtl;
+padding:0;
+box-sizing:border-box;
+font-family:'Cairo',sans-serif;
+}
+
+body{
+background:#f8fafc;
+color:#222;
 }
 
 header{
-background:#0d6efd;
-color:white;
-padding:40px;
-text-align:center;
+background:#0f172a;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
-nav{
-background:white;
-padding:15px;
-text-align:center;
-box-shadow:0 2px 5px rgba(0,0,0,.1);
+.logo{
+color:#fff;
+font-size:28px;
+font-weight:800;
+}
+
+.logo span{
+color:#facc15;
 }
 
 nav a{
-margin:10px;
+color:white;
 text-decoration:none;
-font-weight:bold;
-color:#0d6efd;
+margin:0 15px;
+font-weight:600;
+transition:.3s;
 }
 
-.container{
-max-width:1100px;
-margin:auto;
-padding:20px;
+nav a:hover{
+color:#facc15;
 }
 
-.card{
-background:white;
-padding:20px;
-margin:15px 0;
-border-radius:10px;
-box-shadow:0 2px 10px rgba(0,0,0,.1);
+.hero{
+min-height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:40px;
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+url('https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+background-position:center;
+}
+
+.hero-content{
+max-width:900px;
+color:white;
+}
+
+.hero h1{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:22px;
+line-height:1.8;
+margin-bottom:30px;
 }
 
 .btn{
 display:inline-block;
-background:#0d6efd;
-color:white;
-padding:10px 20px;
-border-radius:6px;
+padding:15px 35px;
+background:#facc15;
+color:#111;
 text-decoration:none;
-margin-top:10px;
+border-radius:50px;
+font-weight:700;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+.stats{
+padding:60px 8%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
+background:white;
+}
+
+.stat{
+text-align:center;
+}
+
+.stat h2{
+font-size:42px;
+color:#2563eb;
+}
+
+.stat p{
+color:#555;
+}
+
+.section-title{
+text-align:center;
+font-size:40px;
+margin:70px 0 40px;
+}
+
+.cards{
+padding:0 8% 80px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+font-size:24px;
+margin-bottom:15px;
+color:#2563eb;
+}
+
+.card p{
+line-height:1.8;
+color:#555;
 }
 
 footer{
-background:#222;
-color:white;
+background:#0f172a;
+padding:40px;
 text-align:center;
-padding:20px;
-margin-top:40px;
+color:white;
 }
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:38px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+header{
+flex-direction:column;
+gap:15px;
+}
+
+nav{
+text-align:center;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-<h1>دليل الأوسبيلدونغ في ألمانيا</h1>
-<p>جميع المواقع والأدوات التي يحتاجها المتقدمون للأوسبيلدونغ</p>
-</header>
+
+<div class="logo">
+Ausbildung <span>Maroc</span>
+</div>
 
 <nav>
 <a href="#">الرئيسية</a>
-<a href="#">الأوسبيلدونغ</a>
-<a href="#">تعلم الألمانية</a>
+<a href="#">Ausbildung</a>
+<a href="#">الألمانية</a>
 <a href="#">السكن</a>
-<a href="#">السيرة الذاتية</a>
+<a href="#">CV</a>
+<a href="#">الفيزا</a>
 </nav>
 
-<div class="container">
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>طريقك نحو ألمانيا يبدأ من هنا 🇩🇪</h1>
+
+<p>
+نجمع لك أفضل مواقع الأوسبيلدونغ،
+تعلم اللغة الألمانية،
+البحث عن السكن،
+إنشاء السيرة الذاتية،
+وشرح إجراءات الفيزا في مكان واحد.
+</p>
+
+<a href="#" class="btn">
+ابدأ الآن
+</a>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="stat">
+<h2>100+</h2>
+<p>موقع مفيد</p>
+</div>
+
+<div class="stat">
+<h2>50+</h2>
+<p>فرصة أوسبيلدونغ</p>
+</div>
+
+<div class="stat">
+<h2>20+</h2>
+<p>مصدر لتعلم الألمانية</p>
+</div>
+
+<div class="stat">
+<h2>1000+</h2>
+<p>زائر مستهدف</p>
+</div>
+
+</section>
+
+<h2 class="section-title">
+الخدمات الرئيسية
+</h2>
+
+<section class="cards">
 
 <div class="card">
-<h2>أفضل مواقع البحث عن الأوسبيلدونغ</h2>
-<p>ابدأ البحث عن الفرص المناسبة لك.</p>
-<a class="btn" href="https://www.ausbildung.de" target="_blank">Ausbildung.de</a>
+<h3>🎓 Ausbildung</h3>
+<p>
+أفضل مواقع البحث عن فرص التكوين المهني في ألمانيا.
+</p>
 </div>
 
 <div class="card">
-<h2>تعلم اللغة الألمانية</h2>
-<p>مصادر مجانية لتعلم اللغة الألمانية.</p>
-<a class="btn" href="https://learngerman.dw.com" target="_blank">DW Learn German</a>
+<h3>📚 تعلم الألمانية</h3>
+<p>
+مصادر مجانية وقنوات ومنصات لتعلم اللغة الألمانية.
+</p>
 </div>
 
 <div class="card">
-<h2>البحث عن السكن</h2>
-<p>مواقع للبحث عن السكن في ألمانيا.</p>
-<a class="btn" href="https://www.wg-gesucht.de" target="_blank">WG-Gesucht</a>
+<h3>🏠 السكن</h3>
+<p>
+مواقع البحث عن السكن للطلاب والمتدربين.
+</p>
 </div>
 
+<div class="card">
+<h3>📄 السيرة الذاتية</h3>
+<p>
+نماذج CV ألمانية احترافية جاهزة للتحميل.
+</p>
 </div>
+
+<div class="card">
+<h3>✈️ الفيزا</h3>
+<p>
+شرح كامل لملف الفيزا وخطوات التقديم.
+</p>
+</div>
+
+<div class="card">
+<h3>💼 فرص العمل</h3>
+<p>
+مواقع البحث عن العمل والتدريب في ألمانيا.
+</p>
+</div>
+
+</section>
 
 <footer>
-© 2026 Ausbildung Maroc
+
+<h3>Ausbildung Maroc</h3>
+
+<p>
+بوابتك العربية نحو الدراسة والتكوين المهني والعمل في ألمانيا.
+</p>
+
+<br>
+
+<p>
+© 2026 جميع الحقوق محفوظة
+</p>
+
 </footer>
 
 </body>
